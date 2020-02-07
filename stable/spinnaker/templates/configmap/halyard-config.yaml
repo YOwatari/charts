@@ -106,7 +106,7 @@ data:
     CREDS+=" --password-command {{ $registry.passwordCommand | quote }}"
     {{- else -}}
     CREDS+=" --password-file /opt/registry/passwords/{{ $registry.name }}"
-    {{- end -}}
+    {{- end }}
     {{ if $registry.email -}}
     CREDS+=" --email {{ $registry.email }}"
     {{- end -}}
